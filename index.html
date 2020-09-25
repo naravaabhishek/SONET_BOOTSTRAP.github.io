@@ -1,0 +1,335 @@
+
+<html>
+    <head>
+        <title>E-Club</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href=
+"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<style>
+  .header {
+    padding:69px;
+    text-align: center;
+    color: rgb(1, 5, 2);
+}
+.sub{
+    text-align: center;
+    color: rgb(255, 0, 0);
+}
+marquee{
+    background-color: rgb(200, 255, 0);
+    font-weight: bolder;
+    width: 100%;
+    height: 5%;
+    color:black;
+}
+h1{
+    text-align: center;
+}
+.navbar{
+    overflow: hidden;
+  background-color: crimson;
+  
+  top: 0;
+}
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+  
+.navbar a:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+.navbar a.active {
+    background-color: #343a40;
+    color: white;
+}
+.game{
+    background-color:#ddd;
+    padding: 10px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+}
+body{
+    background-color: indianred;
+}
+.content{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-style: italic bold;
+}
+img{
+    width: fit-content;
+    align-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.description{
+    margin-left: 80px;
+    margin-right: 80px;
+    text-align: center;
+    font-weight: bold;
+}
+.button {
+    border: none;
+    color: white;
+    padding: 5px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 15px;
+    transition-duration: 0.4s;
+    width: 20%;
+    margin-left: 40%;
+    white-space: normal;
+    
+}
+  .button1 {
+    background-color: white; 
+    text-align: center;
+    color: black; 
+    border: 3px solid rgb(204, 4, 64);
+    white-space: normal;
+}
+
+  .button1:hover {
+    background-color:rgb(204, 4, 64);
+    color: white;
+}
+.m-initial{
+    float: left; 
+    margin-left: 45%;
+}
+.m-rest{
+    float: left;
+    margin-left: 20px;
+}
+.foot{
+    color: rgb(255, 238, 0);
+    text-align: center;
+    font-style: italic bold;
+}
+
+
+</style> 
+</head>
+<body background="data:image/jpeg;base64,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">
+    <div class="header" style="margin-bottom: 0%;">
+        <h1> E-CLUB</h1> 
+        <P class="sub"><h4>Tournament Info</h4></P>            
+    </div>
+    <marquee><h4>Welcome to the <em>E-CULB Tournament</em></h4></marquee>
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+ 
+            </button>
+           
+            <div class="collapse navbar-collapse" id="Navbar">
+             <ul class="navbar-nav mr-auto">
+             <li class="nav-item active"><a class="nav-link" href="#"><h3>Games:</h3></a></li>
+             <li class="nav-item"><a class="nav-link" href="#cricket"><h6>Cricket</h6></a></li>
+             <li class="nav-item"><a class="nav-link" href="#Hockey"><h6>Hockey</h6></a></li>
+             <li class="nav-item"><a class="nav-link" href="#football"><h6>Football</h6></a></li>
+         </ul>
+         <span class="navbar-text">
+             <a data-toggle="modal" data-target="#loginModal">
+                  <span class="fa fa-sign-in"> Login </span>
+             </a>
+         </span>
+            </div>
+            
+        </div>
+ 
+    </nav>
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                    <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="exampleInputPassword3">Password</label>
+                                <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
+                            </div>
+                            <div class="col-sm-auto">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label"> Remember me
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
+                        </div>
+                    </form>
+                       
+    
+                   </div>
+               </div>
+           </div>
+       </div>
+    <div class="game">
+        <h1 id="cricket">Cricket</h1>
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+             
+              <div class="carousel-item active">
+                <img class="d-block w-50" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTzVfUnk6TvT5QXtbTi03Eoyeh-KIG15eYbVw&usqp=CAU" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-50" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTg8IasRBKJ8kV0wcerxzYha8th7tgUDzViOg&usqp=CAU" alt="Third slide">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+          <div>
+              <p>
+                  <h2 style="text-align: center;">Cricket Tournaments In World</h2>
+                  <br>
+                  <h5 style="background-color:  orange;">IPL</h5>
+                  The Indian Premier League (IPL) is a professional Twenty20 cricket league in India contested during March or April and May of every year by eight teams representing eight different cities in India. The league was founded by the Board of Control for Cricket in India (BCCI) in 2008. The IPL has an exclusive window in ICC Future Tours Programme.
+                  <br>
+                  <h5 style="background-color:  blue;">ODI</h5>
+                  A One Day International (ODI) is a form of limited overs cricket, played between two teams with international status, in which each team faces a fixed number of overs, currently 50 (used to be 60 overs until 1983).The Cricket World Cup, generally held every four years, is played in this format. One Day International matches are also called Limited Overs Internationals (LOI), although this generic term may also refer to Twenty20 International matches. They are major matches and considered the highest standard of List A, limited-overs competition.
+                  <br>
+                  <h5 style="background-color: yellowgreen;">T20</h5>
+                  Twenty20 cricket or Twenty-20 (often abbreviated to T20), is a shortened format of cricket. At the professional level, it was originally introduced by the England and Wales Cricket Board (ECB) in 2003 for the inter-county competition.In a Twenty20 game, the two teams have a single innings each, which is restricted to a maximum of 20 overs. Together with first-class and List A cricket, Twenty20 is one of the three current forms of cricket recognised by the International Cricket Council (ICC) as being at the highest international or domestic level.
+                  <button class="btn button button1" type="submit" onclick="alert('Visit E-Club Help')">Click Here For More Tournaments</button>
+              </p>
+          </div>
+        
+        
+          </div>
+    </div>
+    <div class="game">
+        <h1 id="Hockey">Hockey</h1>
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+             
+              <div class="carousel-item active">
+                <img class="d-block w-50" src="data:image/jpeg;base64,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" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-50" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQadY_j5nSlOZp-FiSWTgdRuwzqygEHUehAsw&usqp=CAU" alt="Third slide">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+          <div>
+              <p>
+                  <h2 style="text-align: center;">Hockey Tournaments In World</h2>
+                  <br>
+                  <h5 style="background-color:  orange;">Hockey India League</h5>
+                  Hockey India League (HIL), known as the Coal India Hockey India League for sponsorship reasons, is a professional field hockey league in India. The league is organized by Hockey India, the governing body for the sport in India.HIL, along with the Indian Premier League, Indian Super League, and Pro Kabaddi League, is considered one of the major sports leagues in the country.HIL consists of six teams, with the regular season lasting two months from January to February, with each team playing 10 games.The top four teams at the end of the season move into the play-offs, where the championship game decides the Hockey India League winner.
+                <br>   
+                <h5 style="background-color:  blue;">FIH</h5>
+                The FIH Hockey Series, also known as the FIH Series, was an international field hockey competition organised by the International Hockey Federation (FIH). The competition, also served as a qualifier for the Olympic Games.The first edition started in 2018, which was also the temporary only edition after the International Hockey Federation decided to discontinue the FIH Series after 2019 and from 2022, will be replaced by Men's and Women's Intercontinental Cups, the new FIH tournament.
+                  
+                  <br>
+                  <h5 style="background-color:  yellowgreen;">Beighton Cup</h5>
+                  Beighton Cup is one of the oldest field hockey tournaments running till date.Instituted in 1895, it is organised by Hockey Bengal earlier called Bengal Hockey Association and used to be held on natural grass at the Mohun Bagan ground on the Maidan in Kolkata (earlier called Calcutta) in India and for last few years has been held on Astro Turf (artificial grass) at Sports Authority of India (SAI East) in Kolkata.The Beighton Cup was initially organized by the Indian Football Association, until the Calcutta Hockey League took over in 1905
+                  <button class="btn button button1" type="submit" onclick="alert('Visit E-Club Help')">Click Here For More Tournaments</button>
+              </p>
+          </div>
+        
+        
+          </div>
+    </div>
+    <div class="game">
+        <h1 id="football">Football</h1>
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+             
+              <div class="carousel-item active">
+                <img class="d-block w-50" src="https://cdn.ttgtmedia.com/visuals/ComputerWeekly/Hero%20Images/sport-football-1-adobe.jpeg" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-50" src="https://ugc.futurelearn.com/uploads/images/2b/7f/header_2b7fa9a2-6988-438f-a468-465e8964bf26.jpg" alt="Third slide">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+          <div>
+              <p>
+                  <h2 style="text-align: center;">Football Tournaments In World</h2>
+                  <br>
+                  <h5 style="background-color:  orange;">UEFA Champions League.</h5>
+                  The UEFA Champions League (abbreviated as UCL) is an annual club football competition organised by the Union of European Football Associations (UEFA) and contested by top-division European clubs, deciding the competition winners through a group and knockout format. It is one of the most prestigious football tournaments in the world and the most prestigious club competition in European football, played by the national league champions (and, for some nations, one or more runners-up) of their national associations.
+                <br>   
+                <h5 style="background-color:  blue;">Copa America Finals.</h5>
+                The Copa América is an international association football competition established in 1916. It is contested by the men's national teams of the members of the Confederación Sudamericana de Fútbol (CONMEBOL), the sport's continental governing body. The most recent Copa América, hosted by the United States in 2016, was won by Chile national football team, who beat Argentina 4–2 in the penalty shootout to obtain the title, after a 0–0 draw.
+                  
+                  <br>
+                  <h5 style="background-color:  yellowgreen;">FIFA World Cup </h5>
+                  The FIFA World Cup, often simply called the World Cup, is an international association football competition contested by the senior men's national teams of the members of the Fédération Internationale de Football Association (FIFA), the sport's global governing body. The championship has been awarded every four years since the inaugural tournament in 1930, except in 1942 and 1946 when it was not held because of the Second World War. The current champion is France, which won its second title at the 2018 tournament in Russia.
+                  <button class="btn button button1" type="submit" onclick="alert('Visit E-Club Help')">Click Here For More Tournaments</button>
+              </p>
+          </div>
+        
+        
+          </div>
+    </div>
+</body>
+<footer>
+    <p class="foot">Copyright Disclaimer Under Section 107 of the Copyright Act 1976, allowance is made for "fair use" for purposes such as criticism, comment, news reporting, teaching, scholarship, and research. Fair use is a use permitted by copyright statute that might otherwise be infringing. Non-profit, educational or personal use tips the balance in favor of fair use.</p>
+    
+    <a class="m-initial" href="https://www.instagram.com/naravaabhishek/?hl=en" ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/599px-Instagram_icon.png" style="height: 30px; width: 30px;"></a>
+    <a class="m-rest" href="mailto:naravaabhishek@gmail.com" ><img src="https://img.favpng.com/15/14/11/gmail-computer-icons-email-google-play-png-favpng-0hpAZ7HRTNe7msEQ52EQij8dh.jpg" style="height: 30px; width: 30px;"></a>
+    
+    <br>
+    <br>
+</footer>
+
+</html>
